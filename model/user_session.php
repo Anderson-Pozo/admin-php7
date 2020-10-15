@@ -14,13 +14,13 @@ class UserSession{
         return $_SESSION['user'];
     }
 
-    public function setSessionTemp($usertemp){
-        $_SESSION['usertemp'] = $usertemp;
-    }
-
-    public function getSessionTemp(){
-        return $_SESSION['usertemp'];
-    }
+//    public function setSessionTemp($usertemp){
+//        $_SESSION['usertemp'] = $usertemp;
+//    }
+//
+//    public function getSessionTemp(){
+//        return $_SESSION['usertemp'];
+//    }
 
     public function closeSession(){
         session_unset();

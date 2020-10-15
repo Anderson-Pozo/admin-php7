@@ -1,12 +1,12 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+<html class="no-js lt-ie9 lt-ie8" lang="">
+<html class="no-js lt-ie9" lang="">
+ <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Login - Vive Tulcán</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,7 +26,7 @@
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 </head>
-<body style="background-image: url('/static/images/body.jpg'); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url('../static/images/body.jpg'); background-repeat: no-repeat; background-size: cover;">
 
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
@@ -37,24 +37,29 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
-                        <div class="form-group">
-                            <label>Nombre de usuario</label>
-                            <input type="email" required class="form-control" placeholder="Nombre de usuario...">
-                        </div>
+                    <form action="" method="post">
+                        <?php
+                        if (isset($errorLogin)){
+                            echo "<span class=\"badge badge-danger\">" . $errorLogin . "</span>";
+                        }
+                        ?>
                         <div class="form-group">
                             <label>Correo electrónico</label>
-                            <input type="email" required class="form-control" placeholder="Email">
+                            <input type="email" name="email" required class="form-control" placeholder="Ingrese su correo electrónico">
                         </div>
                         <div class="form-group">
                             <label>Contraseña</label>
-                            <input type="password" required class="form-control" placeholder="Password">
+                            <input type="password" name="password" required class="form-control" placeholder="Ingrese su contraseña">
                         </div>
-
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Registrarse</button>
-
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Mantener sesión abierta
+                            </label>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Iniciar sesión</button>
                         <div class="register-link m-t-15 text-center">
-                            <p>Ya tiene una cuenta ? <a href="#"> Ingresar</a></p>
+                            <p>No tiene una cuenta? <a href="../controller/register.php"> Regístrese aquí</a></p>
                         </div>
                     </form>
                 </div>

@@ -12,6 +12,18 @@ class User extends Database{
         parent::__construct();
     }
 
+    public function setUser($email){
+        $query = "SELECT * FROM usuarios WHERE email = :email";
+        $result = $this->connectDatabase()->prepare($query);
+        $result->execute(array(":email" => $email));
+
+        foreach ($result as $currentUser) {
+            $this->first_name = $currentUser['nombre'];
+            $this->last_name = $currentUser['apellido'];
+            $this->email = $currentUser['email'];
+        }
+    }
+
     public function getName(){
         return $this->first_name . " " . $this->last_name;
     }
@@ -63,7 +75,7 @@ class User extends Database{
         $result->execute(array(":email" => $email));
 
         while($register = $result->fetch(PDO::FETCH_ASSOC)){
-            (self::verifyPasswordHash($password, $register["password"])) ? $count++ : null ;
+            (Password::verifyPasswordHash($password, $register["password"])) ? $count++ : null ;
         }
 
         if ($count>0){

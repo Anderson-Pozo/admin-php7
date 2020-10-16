@@ -12,20 +12,20 @@
                 <li class="<?php  if ($active=='hostal'){ echo "active"; } ?>">
                     <a href="../controller/hostal.php"><i class="menu-icon fa fa-h-square"></i>Hostales</a>
                 </li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-cutlery"></i>Restaurantes</a>
+                <li class="<?php  if ($active=='restaurante'){ echo "active"; } ?>">
+                    <a href="../controller/restaurante.php"><i class="menu-icon fa fa-cutlery"></i>Restaurantes</a>
                 </li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-coffee"></i>Cafeterias</a>
+                <li class="<?php  if ($active=='cafeteria'){ echo "active"; } ?>">
+                    <a href="../controller/cafeteria.php"><i class="menu-icon fa fa-coffee"></i>Cafeterias</a>
                 </li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-music"></i>Discotecas</a>
+                <li class="<?php  if ($active=='discoteca'){ echo "active"; } ?>">
+                    <a href="../controller/discoteca.php"><i class="menu-icon fa fa-music"></i>Discotecas</a>
                 </li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-glass"></i>Bares</a>
+                <li class="<?php  if ($active=='bar'){ echo "active"; } ?>">
+                    <a href="../controller/bar.php"><i class="menu-icon fa fa-glass"></i>Bares</a>
                 </li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-group"></i>Complejos</a>
+                <li class="<?php  if ($active=='complejo'){ echo "active"; } ?>">
+                    <a href="../controller/complejo.php"><i class="menu-icon fa fa-group"></i>Complejos</a>
                 </li>
                 <li class="menu-title"><hr></li>
                 <li>

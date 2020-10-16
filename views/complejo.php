@@ -81,16 +81,20 @@ include_once '../layout/navbar.php';
     <!-- Content -->
     <div class="content">
         <?php
-            include_once '../layout/modal_create.php';
+        include_once '../layout/modal_create.php';
         ?>
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Hostales</strong>
+                <strong class="card-title">Complejos</strong>
             </div>
             <div class="card-body">
                 <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
                     <i class="fa fa-plus-square"></i> Agregar registro
                 </button>
+                <?php
+                $response = $complejo->getAllItems(7);
+                if($response){
+                ?>
                 <div class="table-stats order-table ov-h">
                     <table class="table ">
                         <thead>
@@ -106,34 +110,34 @@ include_once '../layout/navbar.php';
                         </thead>
                         <tbody>
                         <?php
-                        $response = $hostal->getAllItems(2);
-                        if($response){
-                            foreach($response as $item){ ?>
-                                <tr>
-                                    <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
-                                    <!--                                    <td><span class="name">--><?php //echo $item['nom_propietario'] ?><!--</span> </td>-->
-                                    <!--                                    <td><span class="name">--><?php //echo $item['email'] ?><!--</span> </td>-->
-                                    <td><span class="name"><?php echo $item['telef_celular'] ?></span></td>
-                                    <td><span class="count"><?php echo $item['num_plazas'] ?></span></td>
-                                    <td><span class="name"><?php echo $item['rango_precio'] ?></span></td>
-                                    <td><span class="name"><?php echo $item['horario'] ?></span></td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#viewmodal">
-                                            <i class="fa fa-eye"></i>
-                                        </button>
-                                        <span> &nbsp;</span>
-                                        <a href="" class="btn btn-primary">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <span> &nbsp;</span>
-                                        <a href="" class="btn btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php }
+                        foreach($response as $item){ ?>
+                            <tr>
+                                <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
+                                <!--                                    <td><span class="name">--><?php //echo $item['nom_propietario'] ?><!--</span> </td>-->
+                                <!--                                    <td><span class="name">--><?php //echo $item['email'] ?><!--</span> </td>-->
+                                <td><span class="name"><?php echo $item['telef_celular'] ?></span></td>
+                                <td><span class="count"><?php echo $item['num_plazas'] ?></span></td>
+                                <td><span class="name"><?php echo $item['rango_precio'] ?></span></td>
+                                <td><span class="name"><?php echo $item['horario'] ?></span></td>
+                                <td>
+                                    <button class="btn btn-info" data-toggle="modal" data-target="#viewmodal">
+                                        <i class="fa fa-eye"></i>
+                                    </button>
+                                    <span> &nbsp;</span>
+                                    <a href="" class="btn btn-primary">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <span> &nbsp;</span>
+                                    <a href="" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php }
                         }else{
-                            echo "<h1>No hay hostales registrados </h1>";
+                            echo "<div class='jumbotron'>
+                                <h1>No hay registros creados</h1>
+                            </div>";
                         }
                         ?>
                         </tbody>
@@ -371,3 +375,5 @@ include_once '../layout/navbar.php';
 </script>
 </body>
 </html>
+
+

@@ -81,16 +81,20 @@ include_once '../layout/navbar.php';
     <!-- Content -->
     <div class="content">
         <?php
-            include_once '../layout/modal_create.php';
+        include_once '../layout/modal_create.php';
         ?>
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Hostales</strong>
+                <strong class="card-title">Cafeterías</strong>
             </div>
             <div class="card-body">
                 <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
                     <i class="fa fa-plus-square"></i> Agregar registro
                 </button>
+                <?php
+                    $response = $cafeteria->getAllItems(4);
+                    if($response){
+                ?>
                 <div class="table-stats order-table ov-h">
                     <table class="table ">
                         <thead>
@@ -106,8 +110,6 @@ include_once '../layout/navbar.php';
                         </thead>
                         <tbody>
                         <?php
-                        $response = $hostal->getAllItems(2);
-                        if($response){
                             foreach($response as $item){ ?>
                                 <tr>
                                     <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
@@ -133,7 +135,9 @@ include_once '../layout/navbar.php';
                                 </tr>
                             <?php }
                         }else{
-                            echo "<h1>No hay hostales registrados </h1>";
+                            echo "<div class='jumbotron'>
+                                <h1>No hay registros creados</h1>
+                            </div>";
                         }
                         ?>
                         </tbody>
@@ -371,3 +375,4 @@ include_once '../layout/navbar.php';
 </script>
 </body>
 </html>
+

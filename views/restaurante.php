@@ -81,11 +81,11 @@ include_once '../layout/navbar.php';
     <!-- Content -->
     <div class="content">
         <?php
-            include_once '../layout/modal_create.php';
+        include_once '../layout/modal_create.php';
         ?>
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Hostales</strong>
+                <strong class="card-title">Restaurantes</strong>
             </div>
             <div class="card-body">
                 <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
@@ -106,7 +106,7 @@ include_once '../layout/navbar.php';
                         </thead>
                         <tbody>
                         <?php
-                        $response = $hostal->getAllItems(2);
+                        $response = $restaurante->getAllItems(3);
                         if($response){
                             foreach($response as $item){ ?>
                                 <tr>
@@ -133,7 +133,7 @@ include_once '../layout/navbar.php';
                                 </tr>
                             <?php }
                         }else{
-                            echo "<h1>No hay hostales registrados </h1>";
+                            echo "<h1>No hay restaurantes registrados </h1>";
                         }
                         ?>
                         </tbody>
@@ -371,3 +371,4 @@ include_once '../layout/navbar.php';
 </script>
 </body>
 </html>
+

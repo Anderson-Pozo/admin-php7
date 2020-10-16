@@ -2,10 +2,9 @@
 
 include_once '../model/establecimiento.php';
 
-$hostal = new Establecimiento();
+$restaurante = new Establecimiento();
 
-
-$active= 'hostal';
+$active= 'restaurante';
 
 
 if (isset($_POST['nom_establecimiento'], $_POST['direccion'], $_POST['horario'], $_POST['rango_precio'],
@@ -32,18 +31,23 @@ if (isset($_POST['nom_establecimiento'], $_POST['direccion'], $_POST['horario'],
     $descripcion = $_POST['descripcion'];
 
 
-    if ($hostal->createEstablecimiento(2, $nom_establecimiento, $direccion, $horario,
+    if ($restaurante->createEstablecimiento(3, $nom_establecimiento, $direccion, $horario,
         $rango_precio, $nom_propietario, $email, $pagina_web, $facebook, $descripcion, $num_plazas,
         $num_hab, $telef_fijo, $telef_celular, $foto_portada, $lat, $lng, $categoria))
     {
         echo "<h1>Registro creado</h1>";
-        header("location: hostal.php");
+        header("location: hotel.php");
     }else{
         echo "<h1>Algo ha ido mal</h1>";
     }
 
 //    echo "<h1>Hola desde post</h1>" . $nom_establecimiento . $direccion, $horario, $rango_precio, $nom_propietario, $email;
 }else{
-    include_once '../views/hostal.php';
+    include_once '../views/restaurante.php';
 }
+
+
+
+
+
 

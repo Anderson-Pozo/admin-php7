@@ -80,11 +80,22 @@
     <!-- /#header -->
     <!-- Content -->
     <div class="content">
+        <?php
+            include_once '../layout/modal_create.php';
+        ?>
+
         <div class="card">
             <div class="card-header">
                 <strong class="card-title">Hoteles</strong>
             </div>
+
             <div class="card-body">
+                <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
+                    <i class="fa fa-plus-square"></i> Agregar registro
+                </button>
+<!--                <a href="../controller/create_estab.php">-->
+<!--                    Crear-->
+<!--                </a>-->
                 <div class="table-stats order-table ov-h">
                     <table class="table ">
                         <thead>
@@ -112,11 +123,24 @@
                                     <td><span class="name"><?php echo $item['rango_precio'] ?></span></td>
                                     <td><span class="name"><?php echo $item['horario'] ?></span></td>
                                     <td>
-                                        <span class="badge badge-complete">Editar</span>
-                                        <span class="badge badge-complete">Eliminar</span>
+<!--                                        <span class="badge badge-complete">Editar</span>-->
+<!--                                        <span class="badge badge-complete">Eliminar</span>-->
+                                        <button class="btn btn-info" data-toggle="modal" data-target="#viewmodal">
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <span> &nbsp;</span>
+                                        <a href="" class="btn btn-primary">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <span> &nbsp;</span>
+                                        <a href="" class="btn btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
                                     </td>
                                 </tr>
-                            <?php }
+                            <?php
+//                                include_once '../layout/modal_detalle.php';
+                            }
                         }else{
                             echo "<h1>No hay hoteles registrados </h1>";
                         }

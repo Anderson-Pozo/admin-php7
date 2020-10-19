@@ -37,6 +37,10 @@ include_once '../layout/navbar.php';
                 <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
                     <i class="fa fa-plus-square"></i> Agregar registro
                 </button>
+                <?php
+                $response = $restaurante->getAllItems(3);
+                if($response){
+                ?>
                 <div class="table-stats order-table ov-h">
                     <table class="table ">
                         <thead>
@@ -52,8 +56,6 @@ include_once '../layout/navbar.php';
                         </thead>
                         <tbody>
                         <?php
-                        $response = $restaurante->getAllItems(3);
-                        if($response){
                             foreach($response as $item){ ?>
                                 <tr>
                                     <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
@@ -79,7 +81,9 @@ include_once '../layout/navbar.php';
                                 </tr>
                             <?php }
                         }else{
-                            echo "<h1>No hay restaurantes registrados </h1>";
+                            echo "<div class='jumbotron'>
+                                <h1>No hay registros creados</h1>
+                            </div>";
                         }
                         ?>
                         </tbody>

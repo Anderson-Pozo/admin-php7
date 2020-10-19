@@ -39,9 +39,10 @@
                 <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
                     <i class="fa fa-plus-square"></i> Agregar registro
                 </button>
-<!--                <a href="../controller/create_estab.php">-->
-<!--                    Crear-->
-<!--                </a>-->
+                <?php
+                $response = $hotel->getAllItems(1);
+                if($response){
+                ?>
                 <div class="table-stats order-table ov-h">
                     <table class="table ">
                         <thead>
@@ -57,8 +58,6 @@
                         </thead>
                         <tbody>
                         <?php
-                        $response = $hotel->getAllItems(1);
-                        if($response){
                             foreach($response as $item){ ?>
                                 <tr>
                                     <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
@@ -91,7 +90,9 @@
 
 
                         }else{
-                            echo "<h1>No hay hoteles registrados </h1>";
+                            echo "<div class='jumbotron'>
+                                <h1>No hay registros creados</h1>
+                            </div>";
                         }
                         ?>
                         </tbody>

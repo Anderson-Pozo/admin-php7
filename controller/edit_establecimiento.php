@@ -3,6 +3,7 @@
     $establecimiento = new Establecimiento();
 
     if (isset($_GET['id'], $_GET['tipo_establecimiento'])){
+
         $id = $_GET['id'];
         $tipo_establecimiento = $_GET['tipo_establecimiento'];
 

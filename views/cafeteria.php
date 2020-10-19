@@ -70,7 +70,7 @@ include_once '../layout/navbar.php';
                                             <i class="fa fa-eye"></i>
                                         </button>
                                         <span> &nbsp;</span>
-                                        <a href="" class="btn btn-primary">
+                                        <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento'] ?>" class="btn btn-primary">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <span> &nbsp;</span>

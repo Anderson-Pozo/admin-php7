@@ -128,13 +128,14 @@ class Establecimiento extends Database{
                                           $email, $pagina_web, $facebook, $descripcion, $num_plazas, $num_hab,
                                           $telef_fijo, $telef_celular, $foto_portada, $lat, $lng, $categoria_estable){
 
-        $sql = 'UPDATE establecimientos SET nom_estable=:nom_estable, direccion=:direccion,
-                horario=horario:, rango_precio=:rango_precio, nom_propietario=:nom_propietario,
-                email=:email, pagina_web=:pagina_web, facebook=:facebook, descripcion=:descripcion, 
-                num_plazas=:num_plazas, `num_hab/mesas`=:num_habmesas, telef_fijo=:telef_fijo, 
+        $sql = "UPDATE establecimientos SET id_establecimiento=:id_establecimiento , nom_estable=:nom_estable, 
+                direccion=:direccion,horario=:horario, rango_precio=:rango_precio, 
+                nom_propietario=:nom_propietario, email=:email, pagina_web=:pagina_web, 
+                facebook=:facebook, descripcion=:descripcion, num_plazas=:num_plazas, 
+                `num_hab/mesas`=:num_habmesas, telef_fijo=:telef_fijo, 
                 telef_celular=:telef_celular, foto_portada=:foto_portada, lat=:lat, lng=:lng, 
                 categoria_estable_id_categoria=:categoria_estable_id_categoria WHERE 
-                id_establecimiento=:id_establecimiento';
+                id_establecimiento=:id_establecimiento";
 
         try {
             $result = $this->connectDatabase()->prepare($sql);

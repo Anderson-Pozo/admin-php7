@@ -50,12 +50,11 @@ if (isset($_POST['nom_establecimiento'], $_POST['direccion'], $_POST['horario'],
         echo "<h1>Algo ha ido mal</h1>";
     }
 
-//    echo "<h1>Hola desde post</h1>" . $nom_establecimiento . $direccion, $horario, $rango_precio, $nom_propietario, $email;
 }else{
     include_once '../views/hotel.php';
 }
 
-//include_once '../views/hotel.php';
+
 
 
 

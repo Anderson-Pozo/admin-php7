@@ -1,5 +1,6 @@
+
 <?php
-    $titulo = 'Hoteles';
+$titulo = 'Hoteles';
 ?>
 <!doctype html>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
@@ -8,26 +9,26 @@
 <html class="no-js" lang="">
 <head>
     <?php
-        include_once '../layout/head.php';
+    include_once '../layout/head.php';
     ?>
 </head>
 
 <body>
 <!--Left Panel-->
 <?php
-    include_once '../layout/navbar.php';
+include_once '../layout/navbar.php';
 ?>
 <!-- Right Panel -->
 <div id="right-panel" class="right-panel">
     <!-- Header-->
     <?php
-        include_once '../layout/header.php';
+    include_once '../layout/header.php';
     ?>
     <!-- /#header -->
     <!-- Content -->
     <div class="content">
         <?php
-            include_once '../layout/modal_create.php';
+        include_once '../layout/modal_create.php';
         ?>
 
         <div class="card">
@@ -39,15 +40,15 @@
                 <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
                     <i class="fa fa-plus-square"></i> Agregar registro
                 </button>
-<!--                <a href="../controller/create_estab.php">-->
-<!--                    Crear-->
-<!--                </a>-->
+                <!--                <a href="../controller/create_estab.php">-->
+                <!--                    Crear-->
+                <!--                </a>-->
                 <div class="table-stats order-table ov-h">
                     <table class="table ">
                         <thead>
                         <tr>
                             <th>Nombre</th>
-<!--                            <th>Propietario</th>-->
+                            <!--                            <th>Propietario</th>-->
                             <th>Teléfono</th>
                             <th>Nº Plazas</th>
                             <th>Precio</th>
@@ -62,20 +63,20 @@
                             foreach($response as $item){ ?>
                                 <tr>
                                     <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
-<!--                                    <td><span class="name">--><?php //echo $item['nom_propietario'] ?><!--</span> </td>-->
-<!--                                    <td><span class="name">--><?php //echo $item['email'] ?><!--</span> </td>-->
+                                    <!--                                    <td><span class="name">--><?php //echo $item['nom_propietario'] ?><!--</span> </td>-->
+                                    <!--                                    <td><span class="name">--><?php //echo $item['email'] ?><!--</span> </td>-->
                                     <td><span class="name"><?php echo $item['telef_celular'] ?></span></td>
                                     <td><span class="count"><?php echo $item['num_plazas'] ?></span></td>
                                     <td><span class="name"><?php echo $item['rango_precio'] ?></span></td>
                                     <td><span class="name"><?php echo $item['horario'] ?></span></td>
                                     <td>
-<!--                                        <span class="badge badge-complete">Editar</span>-->
-<!--                                        <span class="badge badge-complete">Eliminar</span>-->
+                                        <!--                                        <span class="badge badge-complete">Editar</span>-->
+                                        <!--                                        <span class="badge badge-complete">Eliminar</span>-->
                                         <button class="btn btn-info" data-toggle="modal" data-target="#viewmodal">
                                             <i class="fa fa-eye"></i>
                                         </button>
                                         <span> &nbsp;</span>
-                                        <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento'] ?>" class="btn btn-primary">
+                                        <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']?>" class="btn btn-primary">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <span> &nbsp;</span>
@@ -85,7 +86,7 @@
                                     </td>
                                 </tr>
 
-                            <?php
+                                <?php
 //                                include '../layout/modal_detalle.php';
                             }
 
@@ -105,7 +106,7 @@
     <div class="clearfix"></div>
     <!-- Footer -->
     <?php
-        include_once '../layout/footer.php';
+    include_once '../layout/footer.php';
     ?>
     <!-- /.site-footer -->
 </div>
@@ -115,7 +116,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-<script src="../static/assets/js/main.js"></script>
+<script src="../../static/assets/js/main.js"></script>
 
 <!--  Chart js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
@@ -129,7 +130,7 @@
 <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
-<script src="static/assets/js/init/weather-init.js"></script>
+<script src="../static/assets/js/init/weather-init.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>

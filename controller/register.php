@@ -5,9 +5,9 @@ include_once '../model/user_session.php';
 $user = new User();
 $userSession = new UserSession();
 
-//if (isset($_SESSION['user'])){
-//    header("location: index.php");
-//}
+if (isset($_SESSION['user'])){
+    header("location: home.php");
+}
 
 if (isset($_POST['name'], $_POST['lastname'], $_POST['username'], $_POST['password'], $_POST['email'])){
     $username = $_POST['username'];
@@ -21,11 +21,10 @@ if (isset($_POST['name'], $_POST['lastname'], $_POST['username'], $_POST['passwo
         include_once '../views/register.php';
     }else{
         $user->createUser($username, $password, $email, $name, $lastname);
-//        $userSession->setCurrentUser($email);
-//        header("location: home.php");
+        $userSession->setCurrentUser($email);
+        header("location: ../index.php");
         echo "Usuario registrado";
     }
-
 }else{
     include_once '../views/register.php';
 }

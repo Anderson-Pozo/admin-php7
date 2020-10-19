@@ -1,5 +1,5 @@
 <?php
-    $titulo = 'Restaurantes';
+    $active = 'inicio';
 ?>
 <!doctype html>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
@@ -13,87 +13,99 @@
 </head>
 
 <body>
-<!--Left Panel-->
+<!-- Left Panel -->
 <?php
-include_once '../layout/navbar.php';
+    include_once '../layout/navbar.php';
 ?>
+<!-- /#left-panel -->
 <!-- Right Panel -->
 <div id="right-panel" class="right-panel">
     <!-- Header-->
     <?php
-    include_once '../layout/header.php';
+        include_once '../layout/header.php';
     ?>
     <!-- /#header -->
     <!-- Content -->
     <div class="content">
-        <?php
-        include_once '../layout/modal_create.php';
-        ?>
-        <div class="card">
-            <div class="card-header">
-                <strong class="card-title">Restaurantes</strong>
-            </div>
-            <div class="card-body">
-                <button   class="btn btn-info mb-1" data-toggle="modal" data-target="#scrollmodal">
-                    <i class="fa fa-plus-square"></i> Agregar registro
-                </button>
-                <div class="table-stats order-table ov-h">
-                    <table class="table ">
-                        <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <!--                            <th>Propietario</th>-->
-                            <th>Teléfono</th>
-                            <th>Nº Plazas</th>
-                            <th>Precio</th>
-                            <th>Horario</th>
-                            <th>Acciones</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $response = $restaurante->getAllItems(3);
-                        if($response){
-                            foreach($response as $item){ ?>
-                                <tr>
-                                    <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
-                                    <!--                                    <td><span class="name">--><?php //echo $item['nom_propietario'] ?><!--</span> </td>-->
-                                    <!--                                    <td><span class="name">--><?php //echo $item['email'] ?><!--</span> </td>-->
-                                    <td><span class="name"><?php echo $item['telef_celular'] ?></span></td>
-                                    <td><span class="count"><?php echo $item['num_plazas'] ?></span></td>
-                                    <td><span class="name"><?php echo $item['rango_precio'] ?></span></td>
-                                    <td><span class="name"><?php echo $item['horario'] ?></span></td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#viewmodal">
-                                            <i class="fa fa-eye"></i>
-                                        </button>
-                                        <span> &nbsp;</span>
-                                        <a href="" class="btn btn-primary">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <span> &nbsp;</span>
-                                        <a href="" class="btn btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php }
-                        }else{
-                            echo "<h1>No hay restaurantes registrados </h1>";
-                        }
-                        ?>
-                        </tbody>
-                    </table>
+        <div class="jumbotron">
+            <h1>Bienvenido de nuevo <?php echo $user->getName(); ?></h1>
+        </div>
+        <!-- Animated -->
+        <div class="animated fadeIn">
+            <!-- Widgets  -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-1">
+                                    <i class="fa fa-hotel"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text">$<span class="count">12</span></div>
+                                        <div class="stat-heading">Revenue</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-2">
+                                    <i class="pe-7s-cart"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count">3435</span></div>
+                                        <div class="stat-heading">Sales</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-3">
+                                    <i class="pe-7s-browser"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count">349</span></div>
+                                        <div class="stat-heading">Templates</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- .animated -->
     </div>
     <!-- /.content -->
     <div class="clearfix"></div>
     <!-- Footer -->
-    <?php
-    include_once '../layout/footer.php';
-    ?>
+    <footer class="site-footer">
+        <div class="footer-inner bg-white">
+            <div class="row">
+                <div class="col-sm-6">
+                    Copyright &copy; 2020 Vive Tulcán
+                </div>
+                <div class="col-sm-6 text-right">
+                    Designed by <a href="https://colorlib.com">Vive Tulcán</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- /.site-footer -->
 </div>
 <!-- /#right-panel -->
@@ -317,4 +329,3 @@ include_once '../layout/navbar.php';
 </script>
 </body>
 </html>
-

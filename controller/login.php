@@ -8,6 +8,7 @@ $user = new User();
 if(isset($_SESSION['user'])) {
     $user->setUser($userSession->getCurrentUser());
     header("location: home.php");
+
 }elseif (isset($_POST['email']) && isset($_POST['password'])) {
 
     $userForm = $_POST['email'];
@@ -15,9 +16,9 @@ if(isset($_SESSION['user'])) {
 
     if ($user->verifyUser($userForm, $passForm)) {
 
-//        $userSession->setCurrentUser($userForm);
+        $userSession->setCurrentUser($userForm);
         $user->setUser($userForm);
-        header("location: ../index.php");
+        header("location: home.php");
 
 //        if ($otp->getEnableCode($user->getEmail())){
 //            $userSession->setSessionTemp($userForm);

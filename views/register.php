@@ -1,40 +1,8 @@
-<!--<html>-->
-<!--<body>-->
-<!--<form action="" method="post">-->
-<!---->
-<!--    <div class="form-group">-->
-<!--        <div class="form-row">-->
-<!--            <div class="col"><label class="text-secondary">Nombre:&nbsp;</label>-->
-<!--                <input class="form-control" name="name" type="text" required="true" pattern="[A-Za-z]+">-->
-<!--            </div>-->
-<!--            <div class="col"><label class="text-secondary">Apellido:&nbsp;</label>-->
-<!--                <input class="form-control" name="lastname" type="text" required="true" pattern="[A-Za-z]+">-->
-<!--            </div>-->
-<!--            <div class="col"><label class="text-secondary">Nombre de usuario:&nbsp;</label>-->
-<!--                <input class="form-control" name="username" type="text" required="true" pattern="[A-Za-z]+">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--        <div class="form-row">-->
-<!--            <div class="col"><label class="text-secondary">Email:</label>-->
-<!--                <input class="form-control" name="email" type="text" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="form-group"><label class="text-secondary">Contraseña:</label>-->
-<!--        <input class="form-control" name="password" type="password" required="true">-->
-<!--    </div>-->
-<!--    <button class="btn btn-info mt-2" type="submit">Aceptar</button>-->
-<!--</form>-->
-<!--</body>-->
-<!--</html>-->
-
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+<html class="no-js lt-ie9 lt-ie8" lang="">
+<html class="no-js lt-ie9" lang="">
+<html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,8 +10,8 @@
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
-    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="apple-touch-icon" href="../static/images/favicon.png">
+    <link rel="shortcut icon" href="../static/images/favicon.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">

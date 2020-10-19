@@ -1,10 +1,19 @@
 <?php
-
+include_once '../model/user.php';
+include_once '../model/user_session.php';
 include_once '../model/establecimiento.php';
 
+$userSession = new UserSession();
+$user = new User();
 $bar = new Establecimiento();
 
 $active= 'bar';
+
+if (isset($_SESSION['user'])){
+    include_once '../views/bar.php';
+}else{
+    header("location: login.php");
+}
 
 
 if (isset($_POST['nom_establecimiento'], $_POST['direccion'], $_POST['horario'], $_POST['rango_precio'],

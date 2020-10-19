@@ -2,8 +2,8 @@
     <nav class="navbar navbar-expand-sm navbar-default">
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="../index.php"><i class="menu-icon fa fa-home"></i>Inicio</a>
+                <li class="<?php  if ($active=='inicio'){ echo "active"; } ?>">
+                    <a href="../controller/home.php"><i class="menu-icon fa fa-home"></i>Inicio</a>
                 </li>
                 <li class="menu-title">Establecimientos</li>
                 <li class="<?php  if ($active=='hotel'){ echo "active"; } ?>">

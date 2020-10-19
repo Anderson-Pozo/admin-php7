@@ -18,8 +18,8 @@ class User extends Database{
         $result->execute(array(":email" => $email));
 
         foreach ($result as $currentUser) {
-            $this->first_name = $currentUser['nombre'];
-            $this->last_name = $currentUser['apellido'];
+            $this->first_name = $currentUser['nombres'];
+            $this->last_name = $currentUser['apellidos'];
             $this->email = $currentUser['email'];
         }
     }

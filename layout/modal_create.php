@@ -50,13 +50,13 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">URL Página web</label>
-                                <input id="pagina_web" name="pagina_web" type="text" class="form-control">
+                                <input id="pagina_web" name="pagina_web" type="url" class="form-control">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">URL Facebook</label>
-                                <input id="facebook" name="facebook" type="text" class="form-control">
+                                <input id="facebook" name="facebook" type="url" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">URL Foto de portada</label>
-                                <input id="foto_portada" name="foto_portada" type="text" class="form-control">
+                                <input id="foto_portada" name="foto_portada" type="url" class="form-control">
                             </div>
                         </div>
                     </div>

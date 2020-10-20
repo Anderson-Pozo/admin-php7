@@ -9,9 +9,7 @@ $hostal = new Establecimiento();
 
 $active= 'hostal';
 
-if (isset($_SESSION['user'])){
-    include_once '../views/hostal.php';
-}else{
+if (!isset($_SESSION['user'])){
     header("location: login.php");
 }
 

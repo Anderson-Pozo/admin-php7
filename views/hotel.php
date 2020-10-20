@@ -60,35 +60,27 @@
                         <?php
                             foreach($response as $item){ ?>
                                 <tr>
-                                    <td><span class="name"><?php echo $item['nom_estable'] ?></span> </td>
-<!--                                    <td><span class="name">--><?php //echo $item['nom_propietario'] ?><!--</span> </td>-->
-<!--                                    <td><span class="name">--><?php //echo $item['email'] ?><!--</span> </td>-->
-                                    <td><span class="name"><?php echo $item['telef_celular'] ?></span></td>
-                                    <td><span class="count"><?php echo $item['num_plazas'] ?></span></td>
-                                    <td><span class="name"><?php echo $item['rango_precio'] ?></span></td>
-                                    <td><span class="name"><?php echo $item['horario'] ?></span></td>
+                                    <td><span class="name"><?php echo $item['nom_estable']; ?></span> </td>
+                                    <td><span class="name"><?php echo $item['telef_celular']; ?></span></td>
+                                    <td><span class="count"><?php echo $item['num_plazas']; ?></span></td>
+                                    <td><span class="name"><?php echo $item['rango_precio']; ?></span></td>
+                                    <td><span class="name"><?php echo $item['horario']; ?></span></td>
                                     <td>
-<!--                                        <span class="badge badge-complete">Editar</span>-->
-<!--                                        <span class="badge badge-complete">Eliminar</span>-->
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#<?php echo $item['id_establecimiento'] ?>">
+                                        <button class="btn btn-info" data-toggle="modal" data-target="#<?php echo $item['id_establecimiento']; ?>">
                                             <i class="fa fa-eye"></i>
                                         </button>
                                         <span> &nbsp;</span>
-                                        <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento'] ?>" class="btn btn-primary">
+                                        <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']; ?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento']; ?>" class="btn btn-primary">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <span> &nbsp</span>
-                                        <a href="../controller/delete_establecimiento.php?id=<?php echo $item['id_establecimiento']?>" class="btn btn-danger">
+                                        <a href="../controller/delete_establecimiento.php?id=<?php echo $item['id_establecimiento']; ?>&tipo=<?php echo $item['tipo_establecimiento']; ?>" class="btn btn-danger">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>
                                 </tr>
-
                             <?php
-//                                include '../layout/modal_detalle.php';
                             }
-
-
                         }else{
                             echo "<div class='jumbotron'>
                                 <h1>No hay registros creados</h1>

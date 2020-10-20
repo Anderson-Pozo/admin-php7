@@ -9,9 +9,7 @@ $cafeteria = new Establecimiento();
 
 $active= 'cafeteria';
 
-if (isset($_SESSION['user'])){
-    include_once '../views/cafeteria.php';
-}else{
+if (!isset($_SESSION['user'])){
     header("location: login.php");
 }
 

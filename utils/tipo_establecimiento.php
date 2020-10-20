@@ -23,3 +23,4 @@ switch ($tipo_establecimiento) {
         break;
 }
 
+?>

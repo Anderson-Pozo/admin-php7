@@ -11,9 +11,10 @@ $establecimiento = new Establecimiento();
 
 $user->setUser($userSession->getCurrentUser());
 
-if (isset($_SESSION['user'])){
-    $active = 'inicio';
-    include_once '../views/home.php';
-}else{
+
+if (!isset($_SESSION['user'])){
     header("location: login.php");
 }
+
+$active = 'inicio';
+include_once '../views/home.php';

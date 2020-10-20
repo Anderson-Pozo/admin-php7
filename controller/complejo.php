@@ -9,12 +9,9 @@ $complejo = new Establecimiento();
 
 $active= 'complejo';
 
-if (isset($_SESSION['user'])){
-    include_once '../views/complejo.php';
-}else{
+if (!isset($_SESSION['user'])){
     header("location: login.php");
 }
-
 
 
 if (isset($_POST['nom_establecimiento'], $_POST['direccion'], $_POST['horario'], $_POST['rango_precio'],

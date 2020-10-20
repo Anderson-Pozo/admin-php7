@@ -9,9 +9,7 @@ $bar = new Establecimiento();
 
 $active= 'bar';
 
-if (isset($_SESSION['user'])){
-    include_once '../views/bar.php';
-}else{
+if (!isset($_SESSION['user'])){
     header("location: login.php");
 }
 

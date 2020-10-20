@@ -9,9 +9,7 @@ $hotel = new Establecimiento();
 
 $active= 'hotel';
 
-if (isset($_SESSION['user'])){
-    include_once '../views/hotel.php';
-}else{
+if (!isset($_SESSION['user'])){
     header("location: login.php");
 }
 
@@ -44,19 +42,11 @@ if (isset($_POST['nom_establecimiento'], $_POST['direccion'], $_POST['horario'],
         $rango_precio, $nom_propietario, $email, $pagina_web, $facebook, $descripcion, $num_plazas,
         $num_hab, $telef_fijo, $telef_celular, $foto_portada, $lat, $lng, $categoria))
     {
-        echo "<h1>Registro creado</h1>";
-        header("location: hotel.php");
-    }else{
-        echo "<h1>Algo ha ido mal</h1>";
+//        header("refresh:1; url=hotel.php");
+        header("Location: hotel.php");
     }
 
 }else{
     include_once '../views/hotel.php';
 }
-
-
-
-
-
-
-
+?>

@@ -7,3 +7,4 @@ $userSession = new UserSession();
 $userSession->closeSession();
 
 header("location: ../controller/login.php");
+?>

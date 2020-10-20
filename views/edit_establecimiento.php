@@ -158,7 +158,7 @@ include_once '../layout/navbar.php';
                         <textarea name="descripcion" id="descripcion" rows="9" placeholder="Ingrese una descripción breve del lugar" class="form-control" ><?php echo $response['descripcion'] ?></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-outline-danger" onclick="history.go(-1);">Cancelar</button>
                         <button type="submit" class="btn btn-outline-success">Guardar</button>
                     </div>
                 </form>

@@ -50,8 +50,8 @@ class Establecimiento extends Database{
     public function getAllItems($id_establecimiento){
 
         $sql = 'SELECT id_establecimiento, nom_estable, direccion, horario, rango_precio, nom_propietario, 
-                email, pagina_web, facebook, descripcion, num_plazas, `num_hab/mesas`, 
-                telef_fijo, telef_celular, foto_portada, lat, lng, tipo_establecimiento_id_tipo FROM establecimientos 
+                email, num_plazas, `num_hab/mesas`, telef_fijo, telef_celular, foto_portada, 
+                tipo_establecimiento_id_tipo FROM establecimientos 
                 WHERE tipo_establecimiento_id_tipo = :id_establecimiento';
 
         $query = $this->connectDatabase()->prepare($sql);
@@ -68,17 +68,12 @@ class Establecimiento extends Database{
                 'horario' => $row['horario'],
                 'rango_precio' => $row['rango_precio'],
                 'nom_propietario' => $row['nom_propietario'],
-                'pagina_web' => $row['pagina_web'],
                 'email' => $row['email'],
-                'facebook' => $row['facebook'],
-                'descripcion' => $row['descripcion'],
                 'num_plazas' => $row['num_plazas'],
                 'num_habmesas' => $row['num_hab/mesas'],
                 'telef_fijo' => $row['telef_fijo'],
                 'telef_celular' => $row['telef_celular'],
                 'foto_portada' => $row['foto_portada'],
-                'lat' => $row['lat'],
-                'lng' => $row['lng'],
                 'tipo_establecimiento' => $row['tipo_establecimiento_id_tipo']
             ];
             array_push($items, $item);
@@ -162,6 +157,30 @@ class Establecimiento extends Database{
         }catch (Exception $e){
             die("Error " . $e->getMessage());
         }
+    }
+
+    public function deleteEstablecimiento($id_establecimiento){
+        $sql = 'DELETE FROM establecimientos WHERE id_establecimiento=:id_establecimiento';
+
+        try {
+            $result = $this->connectDatabase()->prepare($sql);
+            $result->execute(array(':id_establecimiento' => $id_establecimiento));
+            return true;
+        }catch (Exception $e){
+            die("Error " . $e->getMessage());
+        }
+    }
+
+    public function countEstablecimientos($tipo_establecimiento){
+        $sql = 'SELECT COUNT(*) FROM establecimientos WHERE tipo_establecimiento_id_tipo=:tipo_establecimiento;';
+
+        $query = $this->connectDatabase()->prepare($sql);
+
+        $query->execute([":tipo_establecimiento" => $tipo_establecimiento]);
+
+        $row = $query->fetch();
+
+        return $row[0];
     }
 
 

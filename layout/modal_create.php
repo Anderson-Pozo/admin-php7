@@ -132,7 +132,7 @@
                         <textarea name="descripcion" id="descripcion" rows="9" placeholder="Ingrese una descripción breve del lugar" class="form-control"></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-outline-success">Guardar</button>
                     </div>
                 </form>

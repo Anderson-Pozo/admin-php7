@@ -1,6 +1,3 @@
-<?php
-    $active = 'inicio';
-?>
 <!doctype html>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
 <html class="no-js lt-ie9 lt-ie8" lang="">
@@ -43,8 +40,8 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">$<span class="count">12</span></div>
-                                        <div class="stat-heading">Revenue</div>
+                                        <div class="stat-text"><span class="count"><?php echo $establecimiento->countEstablecimientos(1); ?></span></div>
+                                        <div class="stat-heading">Hoteles</div>
                                     </div>
                                 </div>
                             </div>
@@ -57,12 +54,12 @@
                         <div class="card-body">
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-2">
-                                    <i class="pe-7s-cart"></i>
+                                    <i class="fa fa-h-square"></i>
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text"><span class="count">3435</span></div>
-                                        <div class="stat-heading">Sales</div>
+                                        <div class="stat-text"><span class="count"><?php echo $establecimiento->countEstablecimientos(2); ?></span></div>
+                                        <div class="stat-heading">Hostales</div>
                                     </div>
                                 </div>
                             </div>
@@ -75,12 +72,84 @@
                         <div class="card-body">
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-3">
-                                    <i class="pe-7s-browser"></i>
+                                    <i class="fa fa-cutlery"></i>
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text"><span class="count">349</span></div>
-                                        <div class="stat-heading">Templates</div>
+                                        <div class="stat-text"><span class="count"><?php echo $establecimiento->countEstablecimientos(3); ?></span></div>
+                                        <div class="stat-heading">Restaurantes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-4">
+                                    <i class="fa fa-coffee"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count"><?php echo $establecimiento->countEstablecimientos(4); ?></span></div>
+                                        <div class="stat-heading">Cafeterías</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-5">
+                                    <i class="fa fa-music"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count"><?php echo $establecimiento->countEstablecimientos(5); ?></span></div>
+                                        <div class="stat-heading">Discotecas</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-6">
+                                    <i class="fa fa-glass"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count"><?php echo $establecimiento->countEstablecimientos(6); ?></span></div>
+                                        <div class="stat-heading">Bares</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-1">
+                                    <i class="fa fa-group"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count"><?php echo $establecimiento->countEstablecimientos(7); ?></span></div>
+                                        <div class="stat-heading">Complejos</div>
                                     </div>
                                 </div>
                             </div>

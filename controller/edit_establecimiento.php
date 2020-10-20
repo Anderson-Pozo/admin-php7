@@ -55,8 +55,5 @@
     }
 
 
-    echo "<h1>$id</h1>";
-    echo "<h1>$tipo_establecimiento</h1>";
-
 ?>
 

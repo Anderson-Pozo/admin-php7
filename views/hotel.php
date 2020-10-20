@@ -53,7 +53,7 @@
                             <th>Nº Plazas</th>
                             <th>Precio</th>
                             <th>Horario</th>
-                            <th>Acciones</th>
+                            <th class="text-center">Acciones</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -70,15 +70,15 @@
                                     <td>
 <!--                                        <span class="badge badge-complete">Editar</span>-->
 <!--                                        <span class="badge badge-complete">Eliminar</span>-->
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#viewmodal">
+                                        <button class="btn btn-info" data-toggle="modal" data-target="#<?php echo $item['id_establecimiento'] ?>">
                                             <i class="fa fa-eye"></i>
                                         </button>
                                         <span> &nbsp;</span>
                                         <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento'] ?>" class="btn btn-primary">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <span> &nbsp;</span>
-                                        <a href="" class="btn btn-danger">
+                                        <span> &nbsp</span>
+                                        <a href="../controller/delete_establecimiento.php?id=<?php echo $item['id_establecimiento']?>" class="btn btn-danger">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>

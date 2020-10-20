@@ -1,5 +1,5 @@
 <?php
-$titulo = 'Eliminar';
+$titulo = 'Detalle';
 ?>
 <!doctype html>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
@@ -30,32 +30,99 @@ include_once '../layout/navbar.php';
             <div class="card-header user-header alt bg-info">
                 <div class="media">
                     <a href="#">
-                        <img class="align-self-center rounded-circle mr-3" style="width:120px; height:120px;" alt="" src="https://firebasestorage.googleapis.com/v0/b/tulcan-be024.appspot.com/o/Portadas%2FFlor%20de%20los%20Andes.jpg?alt=media&token=2946acda-23a4-4e81-860c-a05a2308024e">
+                        <img class="align-self-center rounded-circle mr-3" style="width:120px; height:120px;" alt="" src="<?php echo $response['foto_portada'] ?>">
                     </a>
                     <div class="media-body">
-                        <h2 class="text-light display-6">Hotel Machado</h2>
+                        <h2 class="text-light display-6"><?php echo $response['nom_estable'] ?></h2>
                         <p class="text-light display-6">
-                            Junin y Ayacucho frente al motel
+                            <?php echo $response['direccion'] ?>
                         </p>
+<!--                        <div class="card-text">-->
+<!--                            <a target="_blank" href="--><?php //echo $response['facebook'] ?><!--"><i class="fa fa-facebook"></i></a>-->
+<!--                            <a target="_blank" href="--><?php //echo $response['pagina_web'] ?><!--"><i class="fa fa-link"></i></a>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Email: </strong>
+                            <label><?php echo $response['email'] ?></label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Propietario: </strong>
+                            <label><?php echo $response['nom_propietario'] ?></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Horario: </strong>
+                            <label><?php echo $response['horario'] ?></label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Rango precio: </strong>
+                            <label><?php echo $response['rango_precio'] ?></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Nº de plazas: </strong>
+                            <label><span class="count"><?php echo $response['num_plazas'] ?></span></label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Nº de habitaciones/mesas: </strong>
+                            <label><span class="count"><?php echo $response['num_habmesas'] ?></span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Teléfono fijo: </strong>
+                            <label><?php echo $response['telef_fijo'] ?></label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Teléfono celular: </strong>
+                            <label><?php echo $response['telef_celular'] ?></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Latitud: </strong>
+                            <label><?php echo $response['lat'] ?></label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <strong class="">Longitud: </strong>
+                            <label><?php echo $response['lng'] ?></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <strong class="">Descripción: </strong>
+                    <label><?php echo $response['descripcion'] ?></label>
+                </div>
+            </div>
+            <div class="card-footer">
 
-
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <a href="#"> <i class="fa fa-envelope-o"></i> Mail Inbox <span class="badge badge-primary pull-right">10</span></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="#"> <i class="fa fa-tasks"></i> Recent Activity <span class="badge badge-danger pull-right">15</span></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="#"> <i class="fa fa-bell-o"></i> Notification <span class="badge badge-success pull-right">11</span></a>
-                </li>
-                <li class="list-group-item">
-                    <a href="#"> <i class="fa fa-comments-o"></i> Message <span class="badge badge-warning pull-right r-activity">03</span></a>
-                </li>
-            </ul>
+            </div>
 
         </section>
     </div>

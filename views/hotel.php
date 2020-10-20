@@ -66,9 +66,9 @@
                                     <td><span class="name"><?php echo $item['rango_precio']; ?></span></td>
                                     <td><span class="name"><?php echo $item['horario']; ?></span></td>
                                     <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#<?php echo $item['id_establecimiento']; ?>">
+                                        <a class="btn btn-info" href="../controller/detail_establecimiento.php?id=<?php echo $item['id_establecimiento']; ?>&tipo=<?php echo $item['tipo_establecimiento']; ?>">
                                             <i class="fa fa-eye"></i>
-                                        </button>
+                                        </a>
                                         <span> &nbsp;</span>
                                         <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']; ?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento']; ?>" class="btn btn-primary">
                                             <i class="fa fa-edit"></i>

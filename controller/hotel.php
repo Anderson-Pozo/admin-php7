@@ -44,6 +44,7 @@ if (isset($_POST['nom_establecimiento'], $_POST['direccion'], $_POST['horario'],
     {
 //        header("refresh:1; url=hotel.php");
         header("Location: hotel.php");
+        exit();
     }
 
 }else{

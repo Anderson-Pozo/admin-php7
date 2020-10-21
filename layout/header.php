@@ -18,7 +18,6 @@
                 </a>
 
                 <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
                     <a class="nav-link" href="../utils/logout.php"><i class="fa fa-power -off"></i>Cerrar sesión</a>
                 </div>
             </div>

@@ -51,11 +51,6 @@
                             <label>Contraseña</label>
                             <input type="password" name="password" required class="form-control" placeholder="Ingrese su contraseña">
                         </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Mantener sesión abierta
-                            </label>
-                        </div>
                         <br>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Iniciar sesión</button>
                         <div class="register-link m-t-15 text-center">

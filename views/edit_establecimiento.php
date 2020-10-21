@@ -60,8 +60,8 @@ include_once '../layout/navbar.php';
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Nombre del propietario <span style="color: red">(*)</span></label>
-                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control" required value="<?php echo $response['nom_propietario'] ?>">
+                                <label class="control-label mb-1">Nombre del propietario</label>
+                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control" pattern="[A-Za-z]+" value="<?php echo $response['nom_propietario'] ?>">
                             </div>
                         </div>
                         <div class="col-6">
@@ -98,14 +98,14 @@ include_once '../layout/navbar.php';
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Nº de plazas</label>
-                                <input id="num_plazas" name="num_plazas" type="number" class="form-control" value="<?php echo $response['num_plazas'] ?>">
+                                <label class="control-label mb-1">Nº de plazas <span style="color: red">(*)</span></label>
+                                <input id="num_plazas" name="num_plazas" type="number" class="form-control" required value="<?php echo $response['num_plazas'] ?>">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Nº habitaciones/mesas</label>
-                                <input id="num_hab" name="num_hab" type="number" class="form-control" value="<?php echo $response['num_habmesas'] ?>">
+                                <label class="control-label mb-1">Nº habitaciones/mesas <span style="color: red">(*)</span></label>
+                                <input id="num_hab" name="num_hab" type="number" class="form-control" required value="<?php echo $response['num_habmesas'] ?>">
                             </div>
                         </div>
                     </div>
@@ -118,22 +118,22 @@ include_once '../layout/navbar.php';
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Teléfono celular <span style="color: red">(*)</span></label>
-                                <input id="telef_celular" name="telef_celular" type="text" class="form-control" required pattern="[0-9]+"  maxlength="10" value="<?php echo $response['telef_celular'] ?>">
+                                <label class="control-label mb-1">Teléfono celular</label>
+                                <input id="telef_celular" name="telef_celular" type="text" class="form-control" pattern="[0-9]+"  maxlength="10" value="<?php echo $response['telef_celular'] ?>">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Latitud <span style="color: red">(*)</span></label>
-                                <input id="lat" name="lat" type="number" class="form-control" required value="<?php echo $response['lat'] ?>">
+                                <label class="control-label mb-1">Latitud</label>
+                                <input id="lat" name="lat" type="number" class="form-control"  value="<?php echo $response['lat'] ?>">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Longitud <span style="color: red">(*)</span></label>
-                                <input id="lng" name="lng" type="number" class="form-control" required value="<?php echo $response['lng'] ?>">
+                                <label class="control-label mb-1">Longitud</label>
+                                <input id="lng" name="lng" type="number" class="form-control"  value="<?php echo $response['lng'] ?>">
                             </div>
                         </div>
                     </div>

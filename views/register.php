@@ -46,11 +46,11 @@
                     ?>
                     <div class="form-group">
                         <label>Nombres</label>
-                        <input type="text" name="name" required class="form-control" placeholder="Ingrese sus nombres">
+                        <input type="text" name="name" required pattern="[A-Za-z]+" class="form-control" placeholder="Ingrese sus nombres">
                     </div>
                     <div class="form-group">
                         <label>Apellidos</label>
-                        <input type="text" name="lastname" required class="form-control" placeholder="Ingrese sus apellidos">
+                        <input type="text" name="lastname" required pattern="[A-Za-z]+" class="form-control" placeholder="Ingrese sus apellidos">
                     </div>
                     <div class="form-group">
                         <label>Nombre de usuario</label>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-group">
                         <label>Correo electrónico</label>
-                        <input type="email" name="email" required class="form-control" placeholder="Ingrese su correo electrónico">
+                        <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" class="form-control" placeholder="Ingrese su correo electrónico">
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>

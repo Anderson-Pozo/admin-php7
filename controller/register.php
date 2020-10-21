@@ -22,7 +22,7 @@ if (isset($_POST['name'], $_POST['lastname'], $_POST['username'], $_POST['passwo
     }else{
         $user->createUser($username, $password, $email, $name, $lastname);
         $userSession->setCurrentUser($email);
-        header("location: ../index.php");
+        header("location: home.php");
         echo "Usuario registrado";
     }
 }else{

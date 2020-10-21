@@ -11,7 +11,7 @@
                 <form action="" method="post">
                     <div class="form-group">
                         <label class="control-label mb-1">Nombre del establecimiento <span style="color: red">(*)</span></label>
-                        <input id="nom_establecimiento" name="nom_establecimiento" type="text" class="form-control" required >
+                        <input id="nom_establecimiento" name="nom_establecimiento" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label class="control-label mb-1">Dirección <span style="color: red">(*)</span></label>
@@ -34,8 +34,8 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Nombre del propietario <span style="color: red">(*)</span></label>
-                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control" required>
+                                <label class="control-label mb-1">Nombre del propietario </label>
+                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control" pattern="[A-Za-z]+">
                             </div>
                         </div>
                         <div class="col-6">
@@ -72,14 +72,14 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Nº de plazas</label>
-                                <input id="num_plazas" name="num_plazas" type="number" class="form-control">
+                                <label class="control-label mb-1">Nº de plazas <span style="color: red">(*)</span></label>
+                                <input id="num_plazas" name="num_plazas" type="number" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Nº habitaciones/mesas</label>
-                                <input id="num_hab" name="num_hab" type="number" class="form-control">
+                                <label class="control-label mb-1">Nº habitaciones/mesas <span style="color: red">(*)</span></label>
+                                <input id="num_hab" name="num_hab" type="number" class="form-control" required>
                             </div>
                         </div>
                     </div>
@@ -92,22 +92,22 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Teléfono celular <span style="color: red">(*)</span></label>
-                                <input id="telef_celular" name="telef_celular" type="text" class="form-control" required pattern="[0-9]+"  maxlength="10">
+                                <label class="control-label mb-1">Teléfono celular</label>
+                                <input id="telef_celular" name="telef_celular" type="text" class="form-control" pattern="[0-9]+"  maxlength="10">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Latitud <span style="color: red">(*)</span></label>
-                                <input id="lat" name="lat" type="number" class="form-control" required>
+                                <label class="control-label mb-1">Latitud</label>
+                                <input id="lat" name="lat" type="number" class="form-control">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label class="control-label mb-1">Longitud <span style="color: red">(*)</span></label>
-                                <input id="lng" name="lng" type="number" class="form-control" required>
+                                <label class="control-label mb-1">Longitud</label>
+                                <input id="lng" name="lng" type="number" class="form-control">
                             </div>
                         </div>
                     </div>

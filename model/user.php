@@ -35,7 +35,7 @@ class User extends Database{
     public function createUser($usuario, $password, $email, $nombres, $apellidos ){
 
         $encrypted_password = Password::generatePasswordHash($password);
-        $is_admin_default = 0;
+        $is_admin_default = 1;
 
         $query = "INSERT INTO usuarios(usuario, password, email, nombres, apellidos, is_admin) 
                   VALUES (:usuario, :password, :email, :nombres, :apellidos, :is_admin)";

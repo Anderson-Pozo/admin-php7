@@ -169,9 +169,6 @@
                 <div class="col-sm-6">
                     Copyright &copy; 2020 Vive Tulcán
                 </div>
-                <div class="col-sm-6 text-right">
-                    Designed by <a href="https://colorlib.com">Vive Tulcán</a>
-                </div>
             </div>
         </div>
     </footer>

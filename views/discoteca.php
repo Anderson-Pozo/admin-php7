@@ -66,15 +66,15 @@ include_once '../layout/navbar.php';
                                 <td><span class="name"><?php echo $item['rango_precio'] ?></span></td>
                                 <td><span class="name"><?php echo $item['horario'] ?></span></td>
                                 <td>
-                                    <button class="btn btn-info" data-toggle="modal" data-target="#viewmodal">
+                                    <a class="btn btn-info" href="../controller/detail_establecimiento.php?id=<?php echo $item['id_establecimiento']; ?>&tipo=<?php echo $item['tipo_establecimiento']; ?>">
                                         <i class="fa fa-eye"></i>
-                                    </button>
-                                    <span> &nbsp;</span>
-                                    <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento'] ?>" class="btn btn-primary">
-                                        <i class="fa fa-edit"></i>
                                     </a>
                                     <span> &nbsp;</span>
-                                    <a href="" class="btn btn-danger">
+                                    <a href="../controller/edit_establecimiento.php?id=<?php echo $item['id_establecimiento']; ?>&tipo_establecimiento=<?php echo $item['tipo_establecimiento']; ?>" class="btn btn-primary">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <span> &nbsp</span>
+                                    <a href="../controller/delete_establecimiento.php?id=<?php echo $item['id_establecimiento']; ?>&tipo=<?php echo $item['tipo_establecimiento']; ?>" class="btn btn-danger">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>

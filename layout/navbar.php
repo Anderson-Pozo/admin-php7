@@ -28,15 +28,15 @@
                     <a href="../controller/complejo.php"><i class="menu-icon fa fa-group"></i>Complejos</a>
                 </li>
                 <li class="menu-title"><hr></li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-leaf"></i>Atractivos</a>
-                </li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-truck"></i>Transporte</a>
-                </li>
-                <li>
-                    <a href=""><i class="menu-icon fa fa-cogs"></i>Servicios generales</a>
-                </li>
+<!--                <li>-->
+<!--                    <a href=""><i class="menu-icon fa fa-leaf"></i>Atractivos</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href=""><i class="menu-icon fa fa-truck"></i>Transporte</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href=""><i class="menu-icon fa fa-cogs"></i>Servicios generales</a>-->
+<!--                </li>-->
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>

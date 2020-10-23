@@ -127,13 +127,13 @@ include_once '../layout/navbar.php';
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">Latitud</label>
-                                <input id="lat" name="lat" type="number" class="form-control"  value="<?php echo $response['lat'] ?>">
+                                <input id="lat" name="lat" type="number" class="form-control" pattern="^([-+,0-9.]+)"  value="<?php echo $response['lat'] ?>">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">Longitud</label>
-                                <input id="lng" name="lng" type="number" class="form-control"  value="<?php echo $response['lng'] ?>">
+                                <input id="lng" name="lng" type="number" class="form-control" pattern="^([-+,0-9.]+)"  value="<?php echo $response['lng'] ?>">
                             </div>
                         </div>
                     </div>

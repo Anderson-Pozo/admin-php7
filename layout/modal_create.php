@@ -101,13 +101,13 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">Latitud</label>
-                                <input id="lat" name="lat" type="number" class="form-control">
+                                <input id="lat" name="lat" type="number" class="form-control" pattern="^([-+,0-9.]+)">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">Longitud</label>
-                                <input id="lng" name="lng" type="number" class="form-control">
+                                <input id="lng" name="lng" type="number" class="form-control" pattern="^([-+,0-9.]+)">
                             </div>
                         </div>
                     </div>

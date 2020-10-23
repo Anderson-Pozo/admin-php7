@@ -61,7 +61,7 @@ include_once '../layout/navbar.php';
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">Nombre del propietario</label>
-                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control" pattern="[A-Za-z]+" value="<?php echo $response['nom_propietario'] ?>">
+                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control" value="<?php echo $response['nom_propietario'] ?>">
                             </div>
                         </div>
                         <div class="col-6">

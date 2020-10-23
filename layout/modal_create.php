@@ -35,7 +35,7 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <label class="control-label mb-1">Nombre del propietario </label>
-                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control" pattern="[A-Za-z]+">
+                                <input id="nom_propietario" name="nom_propietario" type="text" class="form-control">
                             </div>
                         </div>
                         <div class="col-6">
